@@ -5,140 +5,140 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Compromisos que nacen del corazón - Jerovia</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-  body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #fcefee, #e9d7f7, #c7e8f9);
-    color: #4a3c4a;
-    margin: 0; padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-  }
-  header {
-    background: #f8c8dc;
-    width: 100%;
-    padding: 1rem 0;
-    text-align: center;
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #5a3a58;
-    box-shadow: 0 4px 10px rgba(200, 160, 190, 0.4);
-    user-select: none;
-    letter-spacing: 1.2px;
-  }
-  main {
-    flex: 1;
-    width: 100%;
-    max-width: 480px;
-    background: #fff0f6cc;
-    margin: 1rem;
-    padding: 2rem 2.5rem 3rem 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 20px rgb(214 172 206 / 0.35);
-    position: relative;
-  }
-  label {
-    display: block;
-    margin: 1.2rem 0 0.5rem 0;
-    font-weight: 600;
-    color: #734563;
-  }
-  input[type="text"], textarea {
-    width: 100%;
-    padding: 0.7rem 1rem;
-    border-radius: 12px;
-    border: 2px solid #dba1c9;
-    font-size: 1.1rem;
-    font-family: 'Montserrat', sans-serif;
-    resize: vertical;
-    background: #fff8fc;
-    transition: border-color 0.3s ease;
-  }
-  input[type="text"]:focus, textarea:focus {
-    outline: none;
-    border-color: #c67fc6;
-    background: #fff0fa;
-  }
-  textarea {
-    min-height: 100px;
-  }
-  button {
-    margin-top: 1.8rem;
-    background: linear-gradient(45deg, #ef9bce, #ce9bf1, #91c8f9);
-    color: white;
-    border: none;
-    padding: 0.85rem 1.6rem;
-    font-size: 1.2rem;
-    border-radius: 14px;
-    cursor: pointer;
-    font-weight: 700;
-    box-shadow: 0 6px 12px rgb(187 129 195 / 0.7);
-    transition: background 0.4s ease;
-    user-select: none;
-  }
-  button:hover {
-    background: linear-gradient(45deg, #e281bf, #b36fd6, #6ca1d9);
-  }
-  .success-msg {
-    margin-top: 1.3rem;
-    color: #6b3a6c;
-    font-weight: 700;
-    user-select: none;
-    text-align: center;
-    display: none;
-  }
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #fcefee, #e9d7f7, #c7e8f9);
+    color: #4a3c4a;
+    margin: 0; padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+  }
+  header {
+    background: #f8c8dc;
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #5a3a58;
+    box-shadow: 0 4px 10px rgba(200, 160, 190, 0.4);
+    user-select: none;
+    letter-spacing: 1.2px;
+  }
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 480px;
+    background: #fff0f6cc;
+    margin: 1rem;
+    padding: 2rem 2.5rem 3rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 10px 20px rgb(214 172 206 / 0.35);
+    position: relative;
+  }
+  label {
+    display: block;
+    margin: 1.2rem 0 0.5rem 0;
+    font-weight: 600;
+    color: #734563;
+  }
+  input[type="text"], textarea {
+    width: 100%;
+    padding: 0.7rem 1rem;
+    border-radius: 12px;
+    border: 2px solid #dba1c9;
+    font-size: 1.1rem;
+    font-family: 'Montserrat', sans-serif;
+    resize: vertical;
+    background: #fff8fc;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus, textarea:focus {
+    outline: none;
+    border-color: #c67fc6;
+    background: #fff0fa;
+  }
+  textarea {
+    min-height: 100px;
+  }
+  button {
+    margin-top: 1.8rem;
+    background: linear-gradient(45deg, #ef9bce, #ce9bf1, #91c8f9);
+    color: white;
+    border: none;
+    padding: 0.85rem 1.6rem;
+    font-size: 1.2rem;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 700;
+    box-shadow: 0 6px 12px rgb(187 129 195 / 0.7);
+    transition: background 0.4s ease;
+    user-select: none;
+  }
+  button:hover {
+    background: linear-gradient(45deg, #e281bf, #b36fd6, #6ca1d9);
+  }
+  .success-msg {
+    margin-top: 1.3rem;
+    color: #6b3a6c;
+    font-weight: 700;
+    user-select: none;
+    text-align: center;
+    display: none;
+  }
 </style>
 </head>
 <body>
 <header>Compromisos que nacen del corazón - Jerovia</header>
 <main>
-  <label for="name-input">Tu nombre:</label>
-  <input type="text" id="name-input" placeholder="Ej: Sol Volpe" autocomplete="off" />
-  <label for="action-input">Acción concreta de servicio que ya realizaste:</label>
-  <textarea id="action-input" placeholder="Ej: Visité a una persona sola y la acompañé" maxlength="250"></textarea>
-  <button id="submit-btn">Enviar compromiso</button>
-  <p class="success-msg" id="success-msg">¡Gracias, tu compromiso ha sido recibido 💖!</p>
+  <label for="name-input">Tu nombre:</label>
+  <input type="text" id="name-input" placeholder="Ej: Sol Volpe" autocomplete="off" />
+  <label for="action-input">Acción concreta de servicio que ya realizaste:</label>
+  <textarea id="action-input" placeholder="Ej: Visité a una persona sola y la acompañé" maxlength="250"></textarea>
+  <button id="submit-btn">Enviar compromiso</button>
+  <p class="success-msg" id="success-msg">¡Gracias, tu compromiso ha sido recibido 💖!</p>
 </main>
 
 <script>
-  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwhHgNql8l7hCUdLCQJlZVBuSCHdqZFt3fjDXD6g6Vk6b4NUtT26m-ws383W0p7nvjcFw/exec';
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbz2pB9QOuw4QugViWx7lV92GvGXAHATH6DNByDOxTHY41lywR7qwfSpT_BZS8H2MIyrAQ/exec';
 
-  document.getElementById('submit-btn').addEventListener('click', () => {
-    const name = document.getElementById('name-input').value.trim();
-    const action = document.getElementById('action-input').value.trim();
+  document.getElementById('submit-btn').addEventListener('click', () => {
+    const name = document.getElementById('name-input').value.trim();
+    const action = document.getElementById('action-input').value.trim();
 
-    if (!name || !action) {
-      alert('Por favor, completa tu nombre y la acción de servicio.');
-      return;
-    }
+    if (!name || !action) {
+      alert('Por favor, completa tu nombre y la acción de servicio.');
+      return;
+    }
 
-    fetch(WEB_APP_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ nombre: name, compromiso: action })
-    })
-    .then(response => {
-      if (!response.ok) throw new Error('Respuesta no OK del servidor');
-      return response.json();
-    })
-    .then(data => {
-      if(data.result === 'ok') {
-        document.getElementById('name-input').value = '';
-        document.getElementById('action-input').value = '';
-        const msg = document.getElementById('success-msg');
-        msg.style.display = 'block';
-        setTimeout(() => { msg.style.display = 'none'; }, 3500);
-      } else {
-        throw new Error(data.message || 'Error desconocido');
-      }
-    })
-    .catch(err => {
-      alert('Error al enviar compromiso. Intenta de nuevo.\nDetalles: ' + err.message);
-      console.error(err);
-    });
-  });
+    fetch(WEB_APP_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nombre: name, compromiso: action })
+    })
+    .then(response => {
+      if (!response.ok) throw new Error('Respuesta no OK del servidor');
+      return response.json();
+    })
+    .then(data => {
+      if(data.result === 'ok') {
+        document.getElementById('name-input').value = '';
+        document.getElementById('action-input').value = '';
+        const msg = document.getElementById('success-msg');
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 3500);
+      } else {
+        throw new Error(data.message || 'Error desconocido');
+      }
+    })
+    .catch(err => {
+      alert('Error al enviar compromiso. Intenta de nuevo.\nDetalles: ' + err.message);
+      console.error(err);
+    });
+  });
 </script>
 </body>
 </html>
