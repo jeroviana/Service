@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Compromisos que nacen del corazón - Jerovia</title>
 <style>
-  /* Mismo CSS de antes, lo podés copiar igual */
   @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
   body {
     font-family: 'Montserrat', sans-serif;
@@ -88,6 +87,7 @@
     font-weight: 700;
     user-select: none;
     text-align: center;
+    display: none;
   }
 </style>
 </head>
@@ -99,11 +99,11 @@
   <label for="action-input">Acción concreta de servicio que ya realizaste:</label>
   <textarea id="action-input" placeholder="Ej: Visité a una persona sola y la acompañé" maxlength="250"></textarea>
   <button id="submit-btn">Enviar compromiso</button>
-  <p class="success-msg" id="success-msg" style="display:none;">¡Gracias, tu compromiso ha sido recibido 💖!</p>
+  <p class="success-msg" id="success-msg">¡Gracias, tu compromiso ha sido recibido 💖!</p>
 </main>
 
 <script>
-  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwCTT-eezG1txgezS2F42jczqOHkQE6fM6_X2rpmCg_CDsCU4bw3ViSM1UwlgrOyWX73Q/exec';
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwhHgNql8l7hCUdLCQJlZVBuSCHdqZFt3fjDXD6g6Vk6b4NUtT26m-ws383W0p7nvjcFw/exec';
 
   document.getElementById('submit-btn').addEventListener('click', () => {
     const name = document.getElementById('name-input').value.trim();
@@ -121,14 +121,18 @@
     })
     .then(response => {
       if (!response.ok) throw new Error('Respuesta no OK del servidor');
-      return response.text();
+      return response.json();
     })
-    .then(() => {
-      document.getElementById('name-input').value = '';
-      document.getElementById('action-input').value = '';
-      const msg = document.getElementById('success-msg');
-      msg.style.display = 'block';
-      setTimeout(() => { msg.style.display = 'none'; }, 3500);
+    .then(data => {
+      if(data.result === 'ok') {
+        document.getElementById('name-input').value = '';
+        document.getElementById('action-input').value = '';
+        const msg = document.getElementById('success-msg');
+        msg.style.display = 'block';
+        setTimeout(() => { msg.style.display = 'none'; }, 3500);
+      } else {
+        throw new Error(data.message || 'Error desconocido');
+      }
     })
     .catch(err => {
       alert('Error al enviar compromiso. Intenta de nuevo.\nDetalles: ' + err.message);
